@@ -1,6 +1,226 @@
 body {
-    margin: 0;
-    padding: 0;
+    background-color: deepskyblue;
+    background-image: url("../images/background.png");
+    background-position: 50% 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
 
-    background: #292929;
+    color: white;
+    margin: 0;
+}
+
+header {
+    background-color: rgba(60, 60, 60, 0.9);
+    border-radius: 0 0 20px 20px;
+    padding: 2px 20px 2px 20px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: x-large;
+}
+
+header ruby {
+    font-family: "Archivo Black", sans-serif;
+    font-style: normal;
+}
+
+header ruby rt {
+    font-family: Noto Sans JP, sans-serif;
+    font-style: normal;
+}
+
+header audio {
+    font-size: 100px;
+    text-align: left;
+    margin-left: 10px;
+}
+
+main > *{
+    background-color: rgba(60, 60, 60, 0.9);
+}
+
+section {
+    margin-left: auto;
+    margin-right: auto;
+    min-width: 400px;
+    max-width: 68%;
+    padding: 20px;
+
+    border-radius: 20px;
+    align-items: stretch;
+    font-family: "Alegreya", serif;
+}
+
+section.main-section {
+    margin-top: 80px;
+}
+
+article.main-article {
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+    margin-inline: 10px;
+}
+
+.left-side {
+    order: 1;
+    font-size: 20px;
+    width: 60%;
+}
+
+.right-side {
+    order: 2;
+    font-size: 25px;
+    font-family: "Archivo Black", sans-serif;
+}
+
+.main-section img {
+    max-width: 100%;
+    border-radius: 10px;
+    border: 10px solid black;
+}
+
+.right-side blockquote {
+    margin-inline: auto;
+    text-align: center;
+}
+
+.term {
+    position: relative;
+    cursor: help;
+}
+
+.term::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 120%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.9);
+    color: #fff;
+    padding: 6px 10px;
+    border-radius: 6px;
+    white-space: normal;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s;
+    font-size: 0.9em;
+    width: 300px;
+}
+
+.term:hover::after {
+    opacity: 1;
+}
+
+section div.crew-container {
+    overflow-x: scroll;
+    white-space: nowrap;
+    scrollbar-gutter: stable;
+}
+
+section div.crew-container::-webkit-scrollbar {
+    height: 0;
+}
+
+section div.crew-container:hover::-webkit-scrollbar {
+    height: 8px;
+}
+
+section div.crew-container::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.4);
+    border-radius: 4px;
+}
+
+section div.crew-container:hover::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.6);
+}
+
+section h2 {
+    text-align: center;
+    font-size: 40px;
+}
+
+section table.abilities-table {
+    width: 100%;
+}
+
+section table.abilities-table td {
+    width: auto;
+    padding: 10px;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 25px;
+    max-width:100%;
+    white-space:nowrap;
+}
+
+section table.abilities-table img {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+section table.abilities-table tr:nth-child(1) img {
+    width: 50%;
+}
+
+section .crew-container td {
+    font-size: 18px;
+    text-align: center;
+}
+
+section .crew-container img {
+    border-radius: 10px;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #222;
+    color: #fff;
+    font-family: sans-serif;
+    border-radius: 20px 20px 0 0;
+}
+
+footer h4 {
+    margin: 0;
+    font-size: 1.1em;
+}
+
+footer h4 a {
+    color: #00bfff;
+    text-decoration: none;
+}
+
+footer h4 a:hover {
+    text-decoration: underline;
+}
+
+footer .source {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    font-size: 0.95em;
+}
+
+footer .source ul {
+    list-style: none;
+    margin: 4px 0 0 0;
+    padding: 0;
+}
+
+footer .source li {
+    margin: 2px 0;
+}
+
+footer .source a {
+    color: #ffd700;
+    text-decoration: none;
+}
+
+footer .source a:hover {
+    text-decoration: underline;
 }
